@@ -1,0 +1,13 @@
+{% extends "base.njk" %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<ul>
+{% for author in authors %}
+    <li{% if loop.first %} class="first"{% endif %}>{{ author }}</li>
+{% endfor %}
+</ul>
+This works :)
+{% endblock %}
